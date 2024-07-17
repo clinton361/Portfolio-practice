@@ -1,0 +1,670 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+/* UTILITIES */
+:root{
+    --background-color: #040b14;
+    --default-color: #ffffff;
+    --heading-color: #ffffff;
+    --surface-color: #151f2b;
+    --contrast-color: #ffffff; 
+    --accent-color: #149ddd;
+
+    --nav-color: #a8a9b4;
+    --nav-hover-color: #ffffff;
+    --nav-mobile-background-color: #040b14;
+    --nav-dropdown-background-color: #040b14;
+    --nav-dropdown-color: #a8a9b4;
+    --nav-dropdown-hover-color: #ffffff;
+
+    /* --background-color: #ffffff;
+    --default-color: #272829;
+    --heading-color: #050d18;
+    --accent-color: #149ddd;
+    --surface-color: #ffffff;
+    --contrast-color: #ffffff; 
+    I think the colors above are for light mode
+    */
+}
+
+/* body{
+    overflow-x: hidden !important;
+} */
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+li{
+    list-style: none;
+}
+
+h2{
+    font-size: 32px;
+    /* color: var(--heading-color); */
+}
+
+p{
+    font-size: 20px;
+    /* color: var(--default-color); */
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    max-width: 100%;
+}
+
+
+@media screen and (min-width: 992px){
+    h2{
+        font-size: 64px;
+    }
+
+    p{
+        font-size: 26px;
+    }
+}
+/* END of UTILITIES */
+/* **************** */
+
+
+/* NAVIGATION */
+#navigation .navbar{
+    background: transparent;
+}
+
+#navigation .navbar-toggler{
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+#navigation .navbar-menu-icon{
+    color: var(--default-color);
+    font-size: 32px;
+    border: none;
+}
+
+#offcanvasNavbar{
+    max-width: 80%;
+    background-color: var(--nav-mobile-background-color);
+    color: var(--default-color);
+}
+
+#navigation #offcanvasNavbar img{
+    border-radius: 50%;
+    width: 120px;
+    border: 8px solid 
+    color-mix(in srgb, var(--default-color), transparent 85%);
+    margin: 0 auto;
+}
+
+#navigation .navbar-nav .nav-item a{
+    color: var(--nav-color);
+    font-size: 18px;
+}
+
+#navigation .navbar-nav .nav-item a:hover{
+    color: var(--default-color);
+}
+
+#navigation .navbar-nav .nav-item a:hover i{
+    color: var(--accent-color);
+}
+
+@media screen and (min-width: 768px) {
+    #offcanvasNavbar{
+        max-width: 40%;
+    }
+
+    .name{
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #offcanvasNavbar{
+        max-width: 20%;
+    }
+
+    .name{
+        font-size: 20px;
+    }
+}
+/* END of NAVIGATION */
+
+/* INTRO / 1ST SECTION */
+#intro{
+    background: url(./img/hero-bg.jpg), linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+    background-blend-mode: overlay;
+    background-position: center;;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#intro .text{
+   color: #fff;
+}
+
+#intro .text span{
+    border-bottom: 3px solid var(--accent-color);
+}
+
+@media screen and (min-width: 992px) {
+    #intro .text{
+        padding-left: 20px;
+     }
+
+     #intro .offcanvas-body{
+        max-width: 21%;
+        background-color: var(--nav-dropdown-background-color);
+        height: 100vh;
+     }
+
+     #intro .profile img{
+        border-radius: 50%;
+        width: 120px;
+        border: 8px solid 
+        color-mix(in srgb, var(--default-color), transparent 85%);
+        margin: 0 auto;
+     }
+
+     #intro .profile h1,
+     #intro .profile ul{
+        color: var(--default-color);
+     }
+
+     #intro .navbar-nav .nav-item a{
+        color: var(--nav-color);
+        font-size: 18px;
+    }
+    
+    #intro .navbar-nav .nav-item a:focus{
+        color: var(--default-color);
+    }
+    
+    #intro .navbar-nav .nav-item a:focus i{
+        color: var(--accent-color);
+    }
+}
+/* END of INTRO / 1ST SECTION */
+/* ************************** */
+
+
+/* <!-- ABOUT / 2ND SECTION --> */
+#about h2,
+#skills h2,
+#resume h2,
+#portfolio h2,
+#services h2,
+#testimonials h2,
+#contact h2{
+    padding-bottom: 16px;
+    position: relative;
+}
+
+#about h2::after,
+#skills h2::after,
+#resume h2::after,
+#portfolio h2::after,
+#services h2::after,
+#testimonials h2::after,
+#contact h2::after{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background: var(--accent-color);
+    left: 0;
+    bottom: 0;
+}
+
+#about p,
+#portfolio p,
+#services p,
+#testimonials p,
+#contact p{
+    font-size: 16px;
+}
+
+#about h2.role{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#about ul.profile li{
+    margin-block: 16px;
+}
+
+#about ul.profile li span{
+    color: var(--accent-color);
+    font-size: 24px;
+    margin-right: 10px;
+}
+/* <!-- END of ABOUT / 2ND SECTION --> */
+/* *********************************** */
+
+
+/* <!-- NUMBERS / 3RD SECTION --> */
+#numbers .icon i{
+    font-size: 44px;
+    color: var(--accent-color);
+    margin-block: 60px;
+}
+
+#numbers .text h3{
+    font-size: 48px;
+}
+
+#numbers .text span{
+    font-size: 14px;
+    color: var(--nav-color);
+}
+/* <!-- END of NUMBERS / 3RD SECTION --> */
+/* *********************************** */
+
+
+/* SKILLS / 4TH SECTION */
+#skills{
+    background-color: #f4fafd;
+}
+
+#skills p{
+    font-size: 16px;
+}
+
+#skills .rating{
+    margin-block: 24px;
+}
+
+#skills .rating p{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+#skills .bar{
+    width: 100%;
+    background-color: var(--nav-color);
+    height: 12px;
+}
+
+#skills .html{
+    width: 100%;
+    background-color: var(--accent-color);
+    height: 12px;
+}
+
+#skills .CSS{
+    width: 90%;
+    background-color: var(--accent-color);
+    height: 12px;
+}
+
+#skills .js{
+    width: 75%;
+    background-color: var(--accent-color);
+    height: 12px;
+}
+
+#skills .php{
+    width: 80%;
+    background-color: var(--accent-color);
+    height: 12px;
+}
+
+#skills .wpress{
+    width: 90%;
+    background-color: var(--accent-color);
+    height: 12px;
+}
+
+#skills .photoshop{
+    width: 55%;
+    background-color: var(--accent-color);
+    height: 12px;
+}
+/* <!-- END of SKILLS / 4TH SECTION --> */
+/* *********************************** */
+
+
+/* RESUME / 5TH SECTION */
+#resume p{
+    font-size: 16px;
+}
+
+#resume .wrapper{
+    padding-left: 24px;
+    position: relative;
+}
+
+#resume .wrapper::before{
+    content: '';
+    border-left: 2px solid var(--accent-color);
+    position: absolute;
+    top: 20px;
+    left: 2px;
+    height: 220px;
+}
+
+#resume .summary h3{
+    font-size: 26px;
+    color: #050d18;
+}
+
+#resume .professional-experience .wrapper::before{
+    height: 380px;
+}
+
+#resume h4{
+    font-size: 18px;
+    color: #050d18;
+    position: relative;
+}
+
+#resume h4::before{
+    content: '';
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    top: 4px;
+    left: -29px;
+    border: 2px solid var(--accent-color);
+}
+
+#resume em{
+    font-size: 16px;
+}
+
+#resume li{
+    list-style: circle;
+    font-size: 16px;
+}
+
+#resume .date{
+    font-size: 16px;
+    padding-left: 8px;
+}
+
+@media screen and (min-width: 768px) {
+    #resume .wrapper::before{
+        height: 172px;
+    }
+
+    #resume .professional-experience .wrapper::before{
+        height: 290px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #resume .wrapper::before{
+        height: 197px;
+    }
+
+    #resume .professional-experience .wrapper::before{
+        height: 342px;
+    }
+}
+/* <!-- END of RESUME / 5TH SECTION --> */
+/* *********************************** */
+
+
+/* <!-- PORTFOLIO / 6TH SECTION --> */
+#portfolio{
+    background-color: #f4fafd;
+}
+
+#portfolio .product-filters{
+    font-size: 14px;
+}
+
+#portfolio .product-filters li a:hover{
+    color: var(--accent-color);
+}
+
+#portfolio .product-filters li a:focus{
+    color: var(--accent-color);
+}
+
+#portfolio .product-section .wrapper{
+    position: relative;
+    overflow: hidden;
+}
+
+#portfolio .product-section .overlay{
+    position: absolute;
+    top: 0;
+    padding: 12px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
+#portfolio .product-section .overlay .badge{
+    background-color: var(--accent-color);
+    padding: 10px;
+    border-radius: 0px;
+}
+
+#portfolio .product-section .overlay .icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+   transform: translate(-50%, -50%);
+   font-size: 30px;
+   color: var(--default-color);
+}
+
+#portfolio .product-section .overlay p{
+    position: absolute;
+    bottom: 30px;
+   color: var(--default-color);
+   font-size: 18px;
+   text-align: center;
+   right: 50%;
+   transform: translateX(50%);
+}
+
+#portfolio .product-section .wrapper img{
+    transition: 0.5s ease-in-out;
+}
+
+#portfolio .product-section .wrapper:hover .overlay{
+   opacity: 1;
+}
+
+#portfolio .product-section .wrapper:hover img{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+@media screen and (min-width: 992px) {
+    #portfolio .product-section .overlay p{
+        font-size: 16px;
+        bottom: 10px;
+    }
+}
+
+/* <!-- END of PORTFOLIO / 6TH SECTION --> */
+/* *********************************** */
+
+
+/* <!-- SERVICES / 7TH SECTION --> */
+#services .wrapper{
+    justify-content: start;
+    align-items: start;
+
+}
+
+#services .wrapper .icon{
+    background: var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    padding: 27px;
+    border-radius: 50%;
+}
+
+#services .wrapper .icon i{
+    color: var(--default-color);
+    font-size: 24px;
+}
+
+/* <!-- END of SERVICES / 7TH SECTION --> */
+/* *************************************** */
+
+
+/* <!-- TESTIMONIALS / 8TH SECTION --> */
+#testimonials{
+    background-color: #f4fafd;
+    position: relative;
+}
+
+#testimonials .quote{
+    background-color: var(--default-color);
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 12px 46px rgba(0, 0, 0, 0.1);
+    margin-inline: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+#testimonials .quote::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 30px solid var(--default-color);
+    bottom: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#testimonials .quote i{
+    color: var(--accent-color);
+    font-size: 24px;
+}
+
+#testimonials .profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+#testimonials .profile img{
+    width: 90px;
+    border-radius: 50%;
+}
+
+#testimonials .carousel{
+    position: relative;
+}
+
+#testimonials .carousel-indicators button{
+    background-color: transparent;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    border: 2px solid var(--accent-color);
+    position: relative;
+    bottom: -50px;
+}
+
+#testimonials .carousel-indicators button.active{
+    background-color: var(--accent-color);
+}
+/* <!-- END of TESTIMONIALS / 8TH SECTION --> */
+/* *************************************** */
+
+
+/* <!-- CONTACT / 8TH SECTION --> */
+#contact .details,
+#contact .form{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+}
+
+#contact .address,
+#contact .phone ,
+#contact .email{
+    display: flex;
+    margin-block: 10px 30px;
+}
+
+#contact .address .icon,
+#contact .phone .icon,
+#contact .email .icon{
+    background-color: #f4fafd;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline: 0 20px;
+} 
+
+#contact .address i,
+#contact .phone i,
+#contact .email i{
+    font-size: 24px;
+    color: var(--accent-color);
+}
+
+#contact .map-wrapper{
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+#contact .map iframe{
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border: 0;
+}
+
+#contact .map,
+#contact .form{
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+}
+
+#contact form .button{
+    display: flex;
+    justify-content: center;
+}
+
+#contact form button{
+    background-color: var(--accent-color);
+    border-radius: 40px;
+    padding: 12px 24px;
+    border: 0;
+    color: var(--default-color);
+}
+/* <!-- END of CONTACT / 8TH SECTION --> */
+/* *************************************** */
