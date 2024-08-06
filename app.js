@@ -1,9 +1,5 @@
 const burger = document.querySelector('.bi-list');
 
-function iconToggler(){
-  burger.classList.toggle('bi-x')
-}
-
 var typed = new Typed(".auto-type", {
     strings : ["Good Learner", "Problem Solver", "Front-End Developer"],
     typeSpeed : 80,
